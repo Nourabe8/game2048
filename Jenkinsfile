@@ -17,7 +17,7 @@ pipeline {
 
 		stage('Build') {
 			steps {
-				sh 'docker build -t nourab/test:1.0 .'
+				sh 'docker build -t nourab/test:2.0 .'
 			}
 		}
 
@@ -29,7 +29,7 @@ pipeline {
 
 		stage('Push') {
 			steps {
-				sh 'docker push nourab/test:1.0'
+				sh 'docker push nourab/test:2.0'
 			}
 		}
 
