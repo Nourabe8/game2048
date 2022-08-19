@@ -3,7 +3,7 @@ pipeline {
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS_PSW = credentials('NouraAlotaibi-dockerhub-token')
+		DOCKERHUB_CREDENTIALS_PSW = credentials('test-hach')
 		AWS_ACCESS_KEY_ID     = credentials('NouraAlotaibi-aws-secret-key-id')
   		AWS_SECRET_ACCESS_KEY = credentials('NouraAlotaibi-aws-secret-access-key')
 		ARTIFACT_NAME = 'test.aws.json'
