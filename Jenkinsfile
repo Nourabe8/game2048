@@ -4,15 +4,15 @@ pipeline {
 
 	environment {
 		DOCKERHUB_CREDENTIALS_PSW = credentials('NouraAlotaibi-dockerhub-token')
-        DOCKERHUB_CREDENTIALS_USR = 'nourab'
+                DOCKERHUB_CREDENTIALS_USR = 'nourab'
 		AWS_ACCESS_KEY_ID     = credentials('NouraAlotaibi-aws-secret-key-id')
   		AWS_SECRET_ACCESS_KEY = credentials('NouraAlotaibi-aws-secret-access-key')
 		ARTIFACT_NAME = 'test.aws.json'
 		AWS_S3_BUCKET = 'test-hach'
 		AWS_EB_APP_NAME = 'test-hach-app'
-        AWS_EB_ENVIRONMENT_NAME = 'Test-hach-app-env'
-        AWS_EB_APP_VERSION = "${BUILD_ID}"
-        AWS_REGION = 'us-east-1'
+                AWS_EB_ENVIRONMENT_NAME = 'Test-hach-app-env'
+                AWS_EB_APP_VERSION = "${BUILD_ID}"
+                AWS_REGION = 'us-east-1'
 	}
 
 	stages {
