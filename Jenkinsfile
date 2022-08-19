@@ -6,10 +6,10 @@ pipeline {
 		DOCKERHUB_CREDENTIALS_PSW = credentials('NouraAlotaibi-dockerhub-token')
 		AWS_ACCESS_KEY_ID     = credentials('NouraAlotaibi-aws-secret-key-id')
   		AWS_SECRET_ACCESS_KEY = credentials('NouraAlotaibi-aws-secret-access-key')
-		ARTIFACT_NAME = 'Dockerrun.aws.json'
-		AWS_S3_BUCKET = 'nouraalotaibi-belt2-artifacts-123456'
-		AWS_EB_APP_NAME = 'NouraAlotaibi_EB2'
-        AWS_EB_ENVIRONMENT_NAME = 'Nouraalotaibieb2-env'
+		ARTIFACT_NAME = 'test.aws.json'
+		AWS_S3_BUCKET = 'test-hach'
+		AWS_EB_APP_NAME = 'test-hach-app'
+        AWS_EB_ENVIRONMENT_NAME = 'Test-hach-app-env'
         AWS_EB_APP_VERSION = "${BUILD_ID}"
 	}
 
@@ -17,7 +17,7 @@ pipeline {
 
 		stage('Build') {
 			steps {
-				sh 'docker build -t nourab/nourab2d4:2.0 .'
+				sh 'docker build -t nourab/test:1.0 .'
 			}
 		}
 
@@ -29,7 +29,7 @@ pipeline {
 
 		stage('Push') {
 			steps {
-				sh 'docker push nourab/nourab2d4:2.0'
+				sh 'docker push nourab/test:1.0'
 			}
 		}
 
